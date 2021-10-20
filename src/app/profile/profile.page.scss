@@ -1,0 +1,53 @@
+
+ 
+ion-content {
+    --background: black;
+
+    h1 {
+        color: rgb(196, 191, 191);
+        font-family: special;
+        position: fixed;
+        margin-left: 10px;
+        }
+
+    ion-avatar {
+        margin-top: 15%;
+        width: 100px;
+        height: 100px;
+        margin-left: 37%;
+    }
+
+    h3 {
+        color: rgb(196, 191, 191);
+        font-size: 15px;
+        font-family: special;
+       text-align: center;
+    }
+
+    ion-list {
+       
+        width: 90%;
+        background: none;
+
+        ion-item {
+        --background: none;
+        --border-color: rgba(65, 65, 65, 0.774);
+
+        ion-label {
+            font-family: special;
+            color: rgba(204, 203, 203, 0.39);
+
+             
+        }
+
+        .text-distance {
+            color: rgba(204, 203, 203, 0.63);
+            font-size: 12px;
+            text-align: end;
+            
+        }
+
+        }
+       
+    }
+}

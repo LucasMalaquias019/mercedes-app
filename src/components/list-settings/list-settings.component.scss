@@ -1,0 +1,27 @@
+ion-list {
+    position: absolute;
+    margin-top: 10%;
+    width: 90%;
+    background: none;
+
+    ion-item {
+        --background: none;
+        --border-color: rgba(65, 65, 65, 0.774);
+
+        ion-label {
+            margin-left: 9px;
+            font-family: special;
+            font-size: 15px;
+            color: rgba(204, 203, 203, 0.63);
+        }
+
+        ion-icon {
+            --margin-left: 90%;
+            color: grey;
+        }
+
+       ion-toggle {
+        --background: rgb(138, 138, 138); 
+       }
+    }
+}

@@ -1,0 +1,37 @@
+h1 {
+    color: rgb(196, 191, 191);
+    font-family: special;
+    font-size: 20px;
+    margin-left: 8px;
+    margin-top: 64px;
+    margin-bottom: 0;
+}
+
+ion-row {
+    ion-card {
+        margin-top: 5px;
+        background: none;
+        box-shadow: none;
+
+        ion-card-content {
+            .icon-fuel {
+                width: 15px;
+                height: 15px;
+            }
+            span {
+                font-size: 12px;
+                font-weight: 500;
+                position: absolute;
+                margin-left: 2px;
+                margin-bottom: auto;
+            }
+
+            .value-fuel {
+                color: rgb(196, 191, 191);
+                font-size: 12px;
+                margin-top: 20px;
+                margin-left: 2px;
+            }
+        }
+    }
+}

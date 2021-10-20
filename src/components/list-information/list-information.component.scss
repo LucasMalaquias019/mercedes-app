@@ -1,0 +1,29 @@
+h3 {
+    margin-left: 10px;
+    font-family: special;
+    color: rgb(196, 191, 191);
+}
+
+ion-list {
+
+   //position: fixed;
+   overflow-x: auto;
+    width: 90%;
+    background: none;
+
+    ion-item {
+        --background: none;
+        --border-color: rgba(65, 65, 65, 0.774);
+
+        ion-label {
+            font-family: special;
+            color: rgba(204, 203, 203, 0.39);
+        }
+
+        .text-distance {
+            color: rgba(204, 203, 203, 0.63);
+            font-size: 12px;
+            text-align: end;
+        }
+    }
+}

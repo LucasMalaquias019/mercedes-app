@@ -1,0 +1,71 @@
+ion-content {
+    --background: url('https://images.netdirector.co.uk/gforces-auto/image/upload/w_870,h_653,dpr_2.0,q_auto,c_fill,f_auto,fl_lossy/auto-client/20843ce3a56fe51be86407e2f37065f4/banner_merc.jpg');
+    font-family: special;
+   
+   img {
+       position: unset;
+       margin-top: 20%;
+       height: 20%;
+       margin-left: 29%;
+   }
+
+    ion-card {
+
+        margin-top: 10%;
+        --background: rgba(56, 56, 56, 0.788);
+        font-family: special;
+
+        
+       ion-card-title {
+    font-weight: 500;
+    text-align: center;
+    color: rgb(245, 241, 241);
+    font-size: 30px;
+    }
+
+        ion-item {
+        --background: rgb(155, 152, 152);
+        color: black;
+        border-radius: 30px;
+        box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.08);
+        margin-top: 5px;
+        margin-left: 8px;
+        --highlight-height: 0px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        height: 50px;
+
+        ion-input {
+            color: rgb(0, 0, 0);
+            --background: rgb(155, 152, 152);
+            font-family: special;
+            margin-left: 4px;
+            margin-bottom: 8px;
+        }
+
+    }
+
+    ion-checkbox {
+        align-items: flex-start;
+        margin-top: 5px;
+        margin-left: 8px;
+        --background-checked: rgb(8, 204, 178);	
+        --checkmark-color: black;
+        --border-color-checked: none;
+
+    }
+
+    p {
+        text-align: center;
+        display: inline;
+        margin-left: 4px;
+        margin-top: 4px;
+        margin-bottom: 10px;
+
+        a {
+            color: rgba(8, 185, 162, 0.856) ;
+        }
+    }
+
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "mercedesApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
