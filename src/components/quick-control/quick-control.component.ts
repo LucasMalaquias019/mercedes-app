@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'quick-control',
@@ -7,12 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuickControlComponent implements OnInit {
 
-
-  buttonColor: string = 'green'
+buttonSelected: boolean = false
   constructor() { }
 
   ngOnInit() {}
 
-
+isSelected(){
+ 
+if(!this.buttonSelected){
+  console.log("O botão deve ficar azul")
   
+  this.buttonSelected = true;
+
 }
+
+else if(this.buttonSelected) {
+  console.log("O botão deve voltar ao normal")
+
+}
+
+ }
+
+}
+

@@ -1,33 +1,33 @@
 <h1>Status</h1>
 
-<ion-row>
-  <ion-col size="3">
-    <ion-card>
-      <ion-card-content>
+<ion-grid>
+  <ion-row size="12">
+
+    <ion-col class="ml-4" size="4">
+      <div class="container fuel">
         <img class="icon-fuel " src="../../assets/gaspump.svg">
         <span>Fuel</span>
-        <span class="value-fuel">{{fuel}}</span>
-      </ion-card-content>
-    </ion-card>
-  </ion-col>
+      </div>
+      <p>{{fuel}}</p>
 
-  <ion-col size="4">
-    <ion-card>
-      <ion-card-content>
+    </ion-col>
+
+    <ion-col size="3">
+      <div class="container">
         <ion-icon name="navigate"></ion-icon>
         <span>Range</span>
-        <span class="value-fuel">{{range}}</span>
-      </ion-card-content>
-    </ion-card>
-  </ion-col>
+      </div>
+      <p>{{range}}</p>
+    </ion-col>
 
-  <ion-col size="5">
-    <ion-card>
-      <ion-card-content id="statusTemperature">
+    <ion-col size="5">
+      <div class="container">
         <ion-icon name="thermometer"></ion-icon>
-        <span >Temperature</span>
-        <span class="value-fuel">{{temperature}}</span>
-      </ion-card-content>
-    </ion-card>
-  </ion-col>
-</ion-row>
+        <span>Temperature</span>
+      </div>
+      <p>{{temperature}}</p>
+
+    </ion-col>
+
+  </ion-row>
+</ion-grid>
