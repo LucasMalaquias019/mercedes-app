@@ -1,7 +1,8 @@
+import { SignupPage } from './../signup/signup.page';
 import { User } from './data-user/user';
 import { AuthService } from './../service/auth.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -14,7 +15,7 @@ export class LoginPage implements OnInit {
   private user: User = new User() ;
  
   isTela: any = '';
-  error: boolean = false;
+  @Input() error: boolean = false;
   nomeTeste: string = 'Lucas'
   logoWarning = ""
 
@@ -33,19 +34,17 @@ export class LoginPage implements OnInit {
 
   login() {
    this.authService.login(this.user)
-    this.error = true
 
-    alert('clicou!')
+   //console.log(document.querySelector('input-control').style.border = ' 1px solid rgb(255, 73, 6)')
+
     }
 
-    
-    onSignIn(googleUser) {
-      let profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-}
+  signupPage() {
+    this.router.navigate(['/signup'])
+
+  }
+
+  
     }
 
 

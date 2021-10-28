@@ -12,12 +12,5 @@ export class ListSettingsComponent {
     private router: Router
   ) { }
 
-  pageProfile() {
-    this.router.navigate(['/profile']);
-   }
-   
-   pageInformationCar() {
-     this.router.navigate(['/car-information'])
-   }
-
+ 
 }

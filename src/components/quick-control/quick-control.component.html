@@ -1,30 +1,37 @@
 <h1>Quick Control</h1>
 
-<ion-row>
+<ion-row size="12">
   <ion-col size="4">
-    <ion-button id="autoDrive" (click)="isSelected()">
-      <img src="../../assets/volante.png"/>
-      <p>
-        Auto Drive
-      </p>
-    </ion-button>
+      <ion-button id="autoDrive" (click)="isSelected()">
+        <img src="../../assets/volante.png" />
+
+        <p id="autoDriveTitle">
+          Auto Drive
+        </p>
+        <span>{{textButton}}</span>
+
+      </ion-button>
   </ion-col>
 
   <ion-col size="4">
-    <ion-button name="Parking" (click)="isSelected()">
-      <img src="../../assets/parking.png"/>
-      <p>
+    <ion-button id="autoParking" name="Parking" (click)="isSelected()">
+      <img src="../../assets/parking.png" />
+
+      <p id="autoParkingTitle">
         Auto Parking
       </p>
+      <span>{{textButton}}</span>
     </ion-button>
   </ion-col>
 
   <ion-col size="4">
     <ion-button id="pickMe" (click)="isSelected()">
-      <img src="../../assets/parking.png"/>
-      <p>
-        Pick Me
+      <ion-icon name="snow-outline"></ion-icon>
+
+      <p id="AirConditioningTitle">
+        Air conditioning
       </p>
+      <span>{{textButton}}</span>
     </ion-button>
   </ion-col>
 </ion-row>

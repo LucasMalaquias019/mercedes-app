@@ -2,11 +2,69 @@
 
 <ion-content>
 
-  <h1>Settings</h1>
+  <ion-grid size="12">
 
-  
-  <slide-car></slide-car>
+    <ion-row size="3">
+      
+      <h1>Settings</h1>
+     
+    </ion-row>
 
-  <app-list-settings></app-list-settings>
+    <ion-row size="3">
+
+      <div class="background">
+        <div class="img-car">
+          <img id="img1" src="../../assets/slide-car1.webp">
+        </div>
+      </div>
+ 
+    </ion-row >
+
+    <ion-row size="3">
+      
+      <ion-list>
+
+        <ion-item>
+          <ion-icon name="person-outline"></ion-icon>
+          <ion-label>Perfil</ion-label>
+          <ion-buttons slot="end">
+            <ion-button (click)="pageProfile()">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+      
+        <ion-item>
+          <ion-icon name="car-sport-outline"></ion-icon>
+          <ion-label>Car Information</ion-label>
+          <ion-buttons slot="end">
+            <ion-button (click)="pageInformationCar()">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+      
+        <ion-item>
+          <ion-icon name="notifications-outline"></ion-icon>
+          <ion-label>Notification</ion-label>
+          <ion-toggle color="primary"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="card-outline"></ion-icon>
+          <ion-label>Payment</ion-label>
+          <ion-buttons slot="end">
+            <ion-button (click)="pagePayment()">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+        
+      </ion-list>
+
+     
+    </ion-row>
+
+  </ion-grid>
 
 </ion-content>

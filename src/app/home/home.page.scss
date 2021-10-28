@@ -1,11 +1,8 @@
-ion-item {
-    --background: black;
-    border-bottom: 4px solid grey;
-}
+
 ion-content {
     --background: black;
 
-    .background{
+    .background {
     background: black;
     background: rgba(121, 117, 117, 0.959);
     background: radial-gradient(circle, rgb(100, 99, 99) 0%, rgba(0, 0, 0, 0.986) 55%, black 5%);
@@ -18,7 +15,7 @@ ion-content {
 
     }
     
-    ion-row{
+    ion-row {
         
         /*border: 1px solid white;
 

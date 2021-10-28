@@ -1,29 +1,36 @@
-<header [isPage]="isPage"></header>
 <ion-content>
-  <img src="../../assets/logowhite.png" >
+
+  <div class="background-car">
+    <img src="../../assets/mercedes-benz-g-63-white-81-1440x2560.jpg">
+  </div>
 
   <ion-card>
-    <ion-card-header>
-      <ion-card-title>Crie sua conta, Grátis!</ion-card-title>
-    </ion-card-header>
-  
-    <ion-card-content>
-      <ion-item>
-        <ion-input type="text" placeholder="Seu nome"></ion-input>
-      </ion-item>
-     
-      <ion-item>
-        <ion-input type="text" placeholder="Informe seu Email"></ion-input>
+    <ion-card-title>Sign In</ion-card-title>
+    <form>
+
+      <ion-item id="input-control">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-input type="email" required placeholder="Seu nome"></ion-input>
       </ion-item>
 
-      <ion-item>
-        <ion-input type="password" placeholder="Digite a Senha"></ion-input>
+      <ion-item id="input-control">
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-input type="email" required placeholder="Informe o email"></ion-input>
       </ion-item>
 
+      <ion-item id="input-control">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <ion-input type="password" required placeholder="Informe sua senha"></ion-input>
+      </ion-item>
 
-    </ion-card-content>
-    <ion-checkbox class="d-inline"></ion-checkbox>
-    <p class="d-inline">Li e concordo com os <a>Termo e Uso</a></p>
-        
+      <ion-item id="input-control">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <ion-input type="password" required placeholder="Confirme sua senha"></ion-input>
+      </ion-item>
+
+      <ion-button color="light">Criar Conta</ion-button>
+      <ion-button color="light" shape="outline" (click)="backPage()">Voltar</ion-button>
+
+    </form>
   </ion-card>
 </ion-content>

@@ -1,20 +1,55 @@
 ion-content {
-    --background: rgba(121, 117, 117, 0.959);
-    --background: radial-gradient(circle, rgb(100, 99, 99) 0%, rgba(0, 0, 0, 0.986) 55%);
-    --align-items: center;
-    font-family: special;
-    --color: grey;
+    --background: black;
 
+    .background {
+        background: black;
+        background: rgba(121, 117, 117, 0.959);
+        background: radial-gradient(circle, rgb(100, 99, 99) 0%, rgba(0, 0, 0, 0.986) 55%, black 5%);
     
+        .img-car {
+            background: none;
+            margin-top: 70px;
+            margin-left: 20px;
+        }
+    
+        }
 
-    h1 {
-        color: rgb(196, 191, 191);
-        position: fixed;
-        margin-left: 10px;
+
+    ion-row {
+       // border: 1px solid white;
+
+        h1 {
+            color: rgb(196, 191, 191);
+            font-family: special;
+            margin-left: 8px;
+        }
     }
 
-   
-        
-        
-    
+    ion-list {
+        // position: absolute;
+         //margin-top: 10%;
+         width: 90%;
+         background: none;
+     
+         ion-item {
+             --background: none;
+             --border-color: rgba(65, 65, 65, 0.774);
+     
+             ion-label {
+                 margin-left: 9px;
+                 font-family: special;
+                 font-size: 15px;
+                 color: rgba(204, 203, 203, 0.63);
+             }
+     
+             ion-icon {
+                 --margin-left: 90%;
+                 color: grey;
+             }
+     
+            ion-toggle {
+             --background: rgb(138, 138, 138); 
+            }
+         }
+     }
 }

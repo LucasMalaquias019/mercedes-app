@@ -1,47 +1,28 @@
-<header-login></header-login>
-
 <ion-content>
-  <slide-login></slide-login>
+
+
+  <div class="background-car">
+    <img src="../../assets/Mercedes-AMG-GT-750x1334.jpg">
+  </div>
+
+  <form>
+
+    <ion-item id="input-control">
+      <ion-icon name="person-outline"></ion-icon>
+      <ion-input type="email" required></ion-input>
+    </ion-item>
+
+    <ion-item id="input-control">
+      <ion-icon name="lock-closed-outline"></ion-icon>
+      <ion-input type="password" required ></ion-input>
+    </ion-item>
+
+    <ion-button (click)="login()">Login</ion-button>
+    <ion-button color="light" (click)="signupPage()">Sign In</ion-button>
+
+
+  </form>
+
+
+
 </ion-content>
-
-<ion-footer class="ion-no-border">
-  <ion-toolbar>
-    <h1>Bem vindo á MercedesApp</h1>
-
-
-
-    <ion-item id="email">
-      <ion-input [(ngModel)]="user.email" placeholder="Digite seu Email" type="text">
-      </ion-input>
-    </ion-item>
-
-
-    <ion-item id="password">
-      <ion-input [(ngModel)]="user.password" id="password" placeholder="Digite sua Senha" type="password">
-      </ion-input>
-    </ion-item>
-
-    <div class="area-buttons">
-      <button-login (click)="login()"></button-login>
-      <button-singup></button-singup>
-    </div>
-
-    <h3>Or continue with</h3>
-
-    <div class="btn-account">
-
-     
-        <button-google data-onsuccess="onSignIn()"></button-google>
-      
-      <button-facebook></button-facebook>
-    </div>
-
-
-
-
-    <a
-      href="https://www2.mercedes-benz.com.br/passengercars.html?group=all&subgroup=all.BODYTYPE.offroader&view=BODYTYPE">©
-      2021. Mercedes-Benz & Vans Brasil</a>
-
-  </ion-toolbar>
-</ion-footer>

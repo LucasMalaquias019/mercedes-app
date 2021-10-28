@@ -13,7 +13,16 @@ export class SettingsPage  {
   private router: Router
   ) { }
 
- 
+  pageProfile() {
+    this.router.navigate(['/profile']);
+   }
+   
+   pageInformationCar() {
+     this.router.navigate(['/car-information'])
+   }
 
+   pagePayment() {
+     this.router.navigate(['/payment'])
+   }
 
 }

@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -12,12 +13,17 @@ export class SignupPage implements OnInit {
 
   constructor(
     private router: Router,
-    private activatedRoute: ActivatedRoute, ) {
-       this.isPage = 'SignUpPage'
+    private activatedRoute: ActivatedRoute,
+    private location: Location ) {
+       
    }
 
   ngOnInit() {
-    console.log(this.activatedRoute.snapshot.routeConfig.component.name)
+    
+  }
+
+  backPage() {
+    this.router.navigate(['/login'])
   }
 
 }

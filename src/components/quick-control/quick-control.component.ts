@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 
+
 @Component({
   selector: 'quick-control',
   templateUrl: './quick-control.component.html',
@@ -8,26 +9,27 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class QuickControlComponent implements OnInit {
 
-buttonSelected: boolean = false
+  @Output() resultEmiter = new EventEmitter()
+
+  buttonSelected: Boolean
+  textButton: String = 'Off';
+
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-isSelected(){
- 
-if(!this.buttonSelected){
-  console.log("O botão deve ficar azul")
-  
-  this.buttonSelected = true;
+  isSelected() {
 
+    //document.getElementById('autoDrive').style.backgroundColor = 'rgb(0, 110, 255)'
+    
+   document.getElementById('autoDrive').style.backgroundColor = 'rgb(0, 110, 255)'
+   document.getElementById('autoDriveTitle').style.color = '#000'
+   this.textButton = 'On'
+   
+   
+
+   
 }
 
-else if(this.buttonSelected) {
-  console.log("O botão deve voltar ao normal")
 
 }
-
- }
-
-}
-

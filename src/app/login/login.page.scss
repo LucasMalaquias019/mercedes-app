@@ -1,72 +1,62 @@
 ion-content {
-    --background: black;
-}
-
-ion-footer {
-    --border-top-right-radius: 50px;
-    --border-top-left-radius: 50px;
-    //margin-right: 10%;
-    background: black;
-
-    ion-toolbar {
-
-        font-weight: bold;
-        color: black;
-        border-top-right-radius: 50px;
-        border-top-left-radius: 50px;
-        --background: rgba(173, 173, 173, 0.959);
-
-        h1 {
-            font-family: special;
-            margin-top: 10px;
-            font-weight: bold;
-            font-size: 20px;
-            --text-align: center;
-            margin-left: 15%;
-        }
-
-        ion-item {
-            --background: rgb(71, 71, 71);
-            color: white;
-            border-radius: 50px;
-            box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.08);
-            margin-top: 8px;
-            margin-left: 8px;
-            --highlight-height: 0px;
-            margin-right: 8px;
-            margin-bottom: 8px;
-
-            ion-input {
-                background: rgb(71, 71, 71);
-                font-family: special;
-                margin-left: 4px;
-                margin-bottom: 4px;
-            }
-        }
-
-        h3 {
-        font-weight: 100;
-        margin-left: 25%;    
-        font-size: 15px;
-        color: rgba(0, 0, 0, 0.712);
+    .background-car {
+      position: fixed;
     }
-
-        /*.alert-login {
-            //--border: 1px solid #fc4c02;
-            --background: grey;
+  
+    form {
+      margin-top: 30%;
+      //background: rgba(150, 145, 145, 0.432);
+     
+      ion-card {
+        background: none;
+        box-shadow: none;
+        width: 90px;
+        margin-left: 40%;
+  
+        img {
+          height: 40px;
+          width: 40px;
+          margin-top: 8px;
+          margin-left: 10px;
+          display: flex
+          //background-color: black;
+          //position: relative;
         }
-        */
-
-        .btn-account {
-            margin-left: 20%;
+  
+        
+      }
+      ion-item {
+        
+      
+      .border-error {
+       border: 1px solid rgb(255, 73, 6);
+      }
+        --background: rgba(31, 31, 31, 0.315);
+        margin-left: 40px;
+        margin-bottom: 4px;
+        //border: 1px solid black;
+        // border-radius: 20px;
+        --highlight-height: 0px;
+        width: 70%;
+  
+        ion-icon {
+          color: white;
+          display: flex;
+          margin: 3px;
         }
-
-        a {
-            font-weight: 200;
-            margin-left: 20px;
-            font-size: 12px;
-            color: black;
-            text-decoration: none;
+  
+        ion-input {
+          color: white;
         }
+  
+      }
+  
+      ion-button {
+        font-weight: 600;
+        --background: rgba(0, 0, 0, 0.678);
+        width: 70%;
+        margin-left: 40px;
+      }
     }
-}
+  }
+  
