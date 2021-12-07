@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { SignupPage } from './../signup/signup.page';
 import { User } from './data-user/user';
 import { AuthService } from './../service/auth.service';
@@ -12,50 +13,62 @@ import { AlertController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
-  private user: User = new User() ;
- 
+  private user: User = new User();
+
   isTela: any = '';
-  @Input() error: boolean = false;
-  nomeTeste: string = 'Lucas'
-  logoWarning = ""
+  error: any = false
+  textError: String = ''
 
   constructor(
     private authService: AuthService,
     private router: Router,
+    private location: Location,
     private activatedRoute: ActivatedRoute,
-    public alertController: AlertController
-    
-  ) {}
- 
+
+  ) { }
+
   ngOnInit() {
     this.isTela = this.activatedRoute.component
-   
+    
+
   }
 
   login() {
-   this.authService.login(this.user)
+    this.authService.login(this.user)
 
-   //console.log(document.querySelector('input-control').style.border = ' 1px solid rgb(255, 73, 6)')
-
+   if(!this.authService.userAuthenticated){
+    this.error = this.authService.resultError
+    this.textError = 'Dados incorretos. Tente novamente!'
+   
+    if(this.user.email == "" || this.user.password == ""){
+      this.error = this.authService.resultError
+      this.textError = 'Os campos são obrigatório!'
+      
     }
+    
+  }   
+
+  }
+
+
 
   signupPage() {
     this.router.navigate(['/signup'])
 
   }
 
-  
-    }
+
+}
 
 
 
-    
-  
-
-  
 
 
 
-  
+
+
+
+
+
 
 

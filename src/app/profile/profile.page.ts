@@ -13,6 +13,7 @@ email: string = 'malaka2314@gmail.com'
 address: string = 'Twin Oaks, Springfield, EUA'
 phoneNumber: string = '+1 334-752-8219'
 licenseDriving: string = '3546583'
+password: String = '*****'
 isPage: string 
 
   constructor(

@@ -1,8 +1,15 @@
 ion-content {
-    .background-car {
+
+  --background: url('../../assets/Mercedes-AMG-GT-750x1334.jpg') no-repeat center center / cover;
+  position: fixed;
+    /*.background-car {
       position: fixed;
     }
+
+    */
   
+
+    
     form {
       margin-top: 30%;
       //background: rgba(150, 145, 145, 0.432);
@@ -25,12 +32,27 @@ ion-content {
   
         
       }
+
+     
+    .border-error {
+      border: 2px solid rgb(255, 73, 6);
+      color: rgb(255, 73, 6) ;
+    }
+
+    .error-message {
+      display: flex;
+      font-weight: 500;
+      font-size: 12px;
+      color: rgb(255, 73, 6);
+      margin-left: 50px;
+
+      span {
+        margin-left: 2px;
+      }
+    }
+    
       ion-item {
         
-      
-      .border-error {
-       border: 1px solid rgb(255, 73, 6);
-      }
         --background: rgba(31, 31, 31, 0.315);
         margin-left: 40px;
         margin-bottom: 4px;
@@ -50,6 +72,7 @@ ion-content {
         }
   
       }
+    
   
       ion-button {
         font-weight: 600;

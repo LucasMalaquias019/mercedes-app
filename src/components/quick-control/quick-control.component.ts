@@ -11,25 +11,58 @@ export class QuickControlComponent implements OnInit {
 
   @Output() resultEmiter = new EventEmitter()
 
-  buttonSelected: Boolean
+  buttonAutoDriveSelected: Boolean = false;
+  buttonAutoParkingSelected: Boolean = false;
+  buttonAirSelected: Boolean = false;
   textButton: String = 'Off';
+
+  isButtonSelect: String = ''
+
+
 
   constructor() { }
 
   ngOnInit() { }
 
-  isSelected() {
 
-    //document.getElementById('autoDrive').style.backgroundColor = 'rgb(0, 110, 255)'
-    
-   document.getElementById('autoDrive').style.backgroundColor = 'rgb(0, 110, 255)'
-   document.getElementById('autoDriveTitle').style.color = '#000'
-   this.textButton = 'On'
-   
-   
+  isAutoDriveSelected() {
+    this.buttonAutoDriveSelected = ! this.buttonAutoDriveSelected
 
-   
+    if (this.buttonAutoDriveSelected) {
+     document.getElementById('autoDriveValue').textContent = 'On'
+      
+    } 
+
+    else {
+      document.getElementById('autoDriveValue').textContent = 'Off'
+    }
+
+  }
+
+  isAutoParkingSelected() {
+  this.buttonAutoParkingSelected = !this.buttonAutoParkingSelected
+
+  if (this.buttonAutoParkingSelected) {
+    document.getElementById('autoParkingValue').textContent = 'On'
+  }
+
+  else {
+    document.getElementById('autoParkingValue').textContent = 'Off'
+
+  }
 }
+
+isAirSelected() {
+  this.buttonAirSelected = !this.buttonAirSelected
+
+  if(this.buttonAirSelected) {
+  document.getElementById('airValue').textContent = 'On'
+  }
+  else {
+    document.getElementById('airValue').textContent = 'Off'    
+  }
+}
+
 
 
 }

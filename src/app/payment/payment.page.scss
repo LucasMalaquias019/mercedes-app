@@ -18,25 +18,37 @@ ion-content {
             --background: rgb(124, 10, 158);
             margin-left: 5%;
             width: 90%;
-            height: 160px;
+            height: 170px;
 
-            ion-card-content {
-                margin-top: 90px;
-                --text-align: center;
-                position: fixed;
-                color: rgb(196, 191, 191);
+            ion-card-header {
+                font-size: 24px;
+                color: rgba(255, 255, 255, 0.63);
+                font-weight: 800;
             }
 
-            img {
-                margin-top: 100px;
-                margin-left: 250px;
-                position: fixed;
-                width: 50px;
-                height: 40px;
+            .date-card {
+                display: flex;
+                margin-top: 60px;
+
+                p {
+                    color: rgb(233, 233, 233);
+                    margin-bottom: 50px;
+                    font-weight: 600;
+                    margin-left: 12px;
+                }
+
+                img {
+                    //margin-top: 100px;
+                    margin-left: 250px;
+                    position: fixed;
+                    width: 50px;
+                    height: 40px;
+                }
             }
         }
 
         ion-list {
+            position: fixed;
             //padding-bottom: 12px;
             width: 90%;
             background: none;
@@ -47,20 +59,20 @@ ion-content {
 
                 ion-label {
                     padding-bottom: 15px;
-                    //font-family: special;
+                    font-family: special;
                     font-weight: 600;
                     color: rgb(196, 191, 191);
                     background: none;
                 }
 
                 span {
-                   margin-top: 50px;
-                   font-weight: 300;
-                   position: fixed;
-                    color: rgb(196, 191, 191); 
+                    margin-top: 50px;
+                    font-weight: 300;
+                    font-family: special;
+                    position: fixed;
+                    color: rgb(196, 191, 191);
                     padding-bottom: 10px;
                 }
-
             }
         }
     }

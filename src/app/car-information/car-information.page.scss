@@ -1,16 +1,39 @@
 ion-content {
-    --background: rgba(121, 117, 117, 0.959);
-    --background: radial-gradient(circle, rgb(100, 99, 99) 0%, rgba(0, 0, 0, 0.986) 55%);
+    --background: black;
 
-    h1 {
-    font-family: special;
-    color: rgb(196, 191, 191);
-    position: fixed;
-    margin-left: 10px;
+    .background {
+        background: black;
+        background: rgba(121, 117, 117, 0.959);
+        background: radial-gradient(circle, rgb(100, 99, 99) 0%, rgba(0, 0, 0, 0.986) 47%, black 5%);
+        .img-car {
+            background: none;
+            margin-top: 10px;
+            margin-left: 20px;
+
+           
+        }
+    
     }
 
-    slide-car {
-        margin-top: 50%;
-    }
+    ion-grid {
 
+        ion-row {
+          //  border: 1px solid white;
+
+            h1 {
+                font-family: special;
+                color: rgb(196, 191, 191);
+                //position: fixed;
+                margin-bottom: 20px;
+                margin-left: 10px;
+            }
+
+        }
+
+        .list-information {
+            margin-top: 10px;
+        }
+
+        
+    }
 }

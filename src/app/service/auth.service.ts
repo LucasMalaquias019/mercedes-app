@@ -1,16 +1,21 @@
+
 import { Router } from '@angular/router';
 import { User } from './../login/data-user/user';
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private userAuthenticated: boolean = false;
+  resultError: EventEmitter<Boolean> = new EventEmitter()
+
+  public userAuthenticated: boolean = false;
+
 
   constructor(
     private router: Router
+    
   ) { }
 
   login(user: User) {
@@ -25,6 +30,10 @@ export class AuthService {
 
     else {
       this.userAuthenticated = false;
+     // window.location.reload()
+      this.resultError.emit(true)
+    
+     
     }
   }
 }

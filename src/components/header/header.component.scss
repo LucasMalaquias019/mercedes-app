@@ -1,5 +1,9 @@
 ion-header {
     ion-toolbar {
         --background: black;
+
+        ion-icon {
+         zoom: 1;
+        }
     }
 }

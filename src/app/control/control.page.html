@@ -2,11 +2,62 @@
 
 <ion-content>
 
-<ion-grid size="12">
-<ion-row>
-  <canvas id="myChart" width="400" height="400"></canvas>
+
+    <h1>Music</h1>
+      <div class="music-player">
+
+        <div class="photo-track">
+          <ion-card>
+            <img src="../../assets/CAPA_LP_BELCHIOR_ALUCINACAO-30.05.17.jpg" alt="">
+          </ion-card>
+        </div>
+
+        <h2 #trackName>{{trackSound}}</h2>
+        <span>Belchior</span>
 
 
-</ion-row>
-  </ion-grid>
+        <div class="sound-line">
+          <ion-item>
+
+            <ion-range #range>
+          
+              <ion-label slot="start">
+                <ion-text>
+                  <p>
+                    00:00
+                  </p>
+                </ion-text>
+              </ion-label>
+
+              <ion-label slot="end">
+                <ion-text>
+                  <p>
+                    {{trackDuration}}
+                  </p>
+                </ion-text>
+              </ion-label>
+
+            </ion-range>
+          </ion-item>
+
+        </div>
+
+        <div class="icon-player">
+          <ion-button fill="clear" shape="round">
+            <ion-icon name="play-skip-back-sharp"></ion-icon>
+          </ion-button>
+
+          <ion-button fill="clear" shape="round" (click)="track()">
+            <ion-icon *ngIf="!isPause" name="play-sharp"></ion-icon>
+            <ion-icon *ngIf="isPause" name="pause-outline"></ion-icon>
+          </ion-button>
+
+          <ion-button fill="clear" shape="round">
+            <ion-icon name="play-skip-forward-sharp"></ion-icon>
+          </ion-button>
+        </div>
+
+      </div>
+
+
 </ion-content>

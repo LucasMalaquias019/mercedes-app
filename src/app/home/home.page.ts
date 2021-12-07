@@ -17,19 +17,4 @@ export class HomePage implements OnInit {
   ngOnInit() { }
 
 
-  resposta(event: any) {
-    this.bunttonQuickSelected = event;
-   
-    if(!this.bunttonQuickSelected){
-      console.log()
-
-
-    }
-    
-  }
-
-  
-
- 
-
 }

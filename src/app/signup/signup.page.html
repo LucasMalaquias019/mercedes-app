@@ -5,30 +5,80 @@
   </div>
 
   <ion-card>
-    <ion-card-title>Sign In</ion-card-title>
+    <ion-card-title>Criar Conta</ion-card-title>
     <form>
 
-      <ion-item id="input-control">
-        <ion-icon name="person-outline"></ion-icon>
-        <ion-input type="email" required placeholder="Seu nome"></ion-input>
+      <ion-item 
+      id="input-control" 
+      [ngClass]="{'border-error': error}">
+        <ion-icon 
+        [ngStyle]="{'color': error ? 'rgb(255, 73, 6)' : 'white'}" 
+        name="person-outline">
+      </ion-icon>
+        <ion-input 
+        [ngStyle]="{'color': error ? 'rgb(255, 73, 6)' : 'white'}" 
+        type="email"
+        [(ngModel)]="name"
+        name="name"
+        placeholder="Seu nome">
+        </ion-input>
       </ion-item>
 
-      <ion-item id="input-control">
-        <ion-icon name="mail-outline"></ion-icon>
-        <ion-input type="email" required placeholder="Informe o email"></ion-input>
+      <ion-item 
+      id="input-control" 
+      [ngClass]="{'border-error': error}">
+        <ion-icon 
+        [ngStyle]="{'color': error ? 'rgb(255, 73, 6)' : 'white'}" 
+        name="mail-outline">
+      </ion-icon>
+        <ion-input 
+        [ngStyle]="{'color': error ? 'rgb(255, 73, 6)' : 'white'}" 
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Informe o e-mail">
+        </ion-input>
       </ion-item>
 
-      <ion-item id="input-control">
-        <ion-icon name="lock-closed-outline"></ion-icon>
-        <ion-input type="password" required placeholder="Informe sua senha"></ion-input>
+      <ion-item 
+      id="input-control"  
+      [ngStyle]="{'borderColor': error || errorPassword ? 'rgb(255, 73, 6)' : 'white'}">
+        <ion-icon 
+        [ngStyle]="{'color': error || errorPassword ? 'rgb(255, 73, 6)' : 'white'}"  
+        name="lock-open-outline">
+      </ion-icon>
+        <ion-input 
+        [ngStyle]="{'color': error || errorPassword ? 'rgb(255, 73, 6)' : 'white'}"
+        type="password"
+        [(ngModel)]="password" 
+        name="password" 
+        placeholder="Informe sua senha">
+        </ion-input>
       </ion-item>
 
-      <ion-item id="input-control">
-        <ion-icon name="lock-closed-outline"></ion-icon>
-        <ion-input type="password" required placeholder="Confirme sua senha"></ion-input>
+      <ion-item 
+      id="input-control" 
+      [ngStyle]="{'borderColor': error || errorPassword ? 'rgb(255, 73, 6)' : 'white'}">
+        <ion-icon 
+        [ngStyle]="{'color': error || errorPassword ? 'rgb(255, 73, 6)' : 'white'}" 
+        name="lock-closed-outline">
+      </ion-icon>
+        <ion-input 
+        [ngStyle]="{'color': error || errorPassword ? 'rgb(255, 73, 6)' : 'white'}"
+        [(ngModel)]="confirmPassword"
+        type="password"
+        name="confirmPassword" 
+        placeholder="Confirme sua senha">
+        </ion-input>
       </ion-item>
 
-      <ion-button color="light">Criar Conta</ion-button>
+      <div *ngIf="error || errorPassword" class="error-message">
+        <ion-icon name="warning-outline"></ion-icon>
+        <span>{{textError}}</span>
+        
+      </div>
+
+      <ion-button color="light" (click)="signIn()">Criar Conta</ion-button>
       <ion-button color="light" shape="outline" (click)="backPage()">Voltar</ion-button>
 
     </form>

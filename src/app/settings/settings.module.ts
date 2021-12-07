@@ -1,3 +1,4 @@
+import { ProfilePageModule } from './../profile/profile.module';
 import { ComponentsModule } from 'src/components/components.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -14,6 +15,7 @@ import { SettingsPage } from './settings.page';
     CommonModule,
     FormsModule,
     IonicModule,
+   
     SettingsPageRoutingModule,
     ComponentsModule
   ],

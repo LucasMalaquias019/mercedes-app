@@ -3,9 +3,12 @@ ion-content {
         position: fixed;
     }
 
+   
+    
+
     ion-card {
         //border: 1px solid  rgb(196, 191, 191);
-        height: 60%;
+        height: 67%;
         margin-top: 150px;
         --background: rgba(0, 0, 0, 0.507);
 
@@ -19,15 +22,38 @@ ion-content {
 
         }
 
+       
+
+       
+
         form {
             margin-top: 5%;
-           // background-color: rgba(0, 0, 0, 0.938);
+
+            .border-error {
+                border: 1px solid rgb(255, 73, 6);
+            }
+    
+
+            .error-message {
+                display: flex;
+                font-weight: 500;
+                font-size: 12px;
+                color: rgb(255, 73, 6);
+                margin-left: 50px;
+          
+                span {
+                  margin-left: 2px;
+                  margin-bottom: 8px;
+                }
+              }           // background-color: rgba(0, 0, 0, 0.938);
 
             ion-item {
                 border: 1px solid  rgb(196, 191, 191);
-                .border-error {
-                    border: 1px solid rgb(255, 73, 6);
-                }
+
+                
+
+
+
                 --background: rgba(2, 2, 2, 0.452);
                 margin-left: 40px;
                 margin-bottom: 4px;

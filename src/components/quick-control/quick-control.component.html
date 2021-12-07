@@ -1,37 +1,52 @@
 <h1>Quick Control</h1>
 
 <ion-row size="12">
+
   <ion-col size="4">
-      <ion-button id="autoDrive" (click)="isSelected()">
+    <ion-button id="autoDrive" [ngStyle]="{'background': buttonAutoDriveSelected ? 'rgb(0, 110, 255)' : 'none' }"
+      (click)="isAutoDriveSelected()">
+
+      <div class="img-button">
         <img src="../../assets/volante.png" />
+      </div>
 
-        <p id="autoDriveTitle">
-          Auto Drive
-        </p>
-        <span>{{textButton}}</span>
+      <p id="autoDriveTitle" [ngStyle]="{'color': buttonAutoDriveSelected ? 'black' : ' rgb(145, 145, 145)' }">
+        Auto Drive
+      </p>
 
-      </ion-button>
+      <span id="autoDriveValue" [ngStyle]="{'color': buttonAutoDriveSelected ? 'black' : ' rgb(145, 145, 145)' }">
+        {{textButton}}
+      </span>
+
+    </ion-button>
   </ion-col>
 
-  <ion-col size="4">
-    <ion-button id="autoParking" name="Parking" (click)="isSelected()">
-      <img src="../../assets/parking.png" />
 
-      <p id="autoParkingTitle">
+  <ion-col size="4">
+    <ion-button id="autoParking" [ngStyle]="{'background': buttonAutoParkingSelected ? 'rgb(0, 110, 255)' : 'none' }" name="Parking" (click)="isAutoParkingSelected()">
+
+      <div class="img-button">
+        <img src="../../assets/parking.png" />
+      </div>
+
+      <p id="autoParkingTitle" [ngStyle]="{'color': buttonAutoParkingSelected ? 'black' : ' rgb(145, 145, 145)' }">
         Auto Parking
       </p>
-      <span>{{textButton}}</span>
+
+      <span id="autoParkingValue" [ngStyle]="{'color': buttonAutoParkingSelected ? 'black' : ' rgb(145, 145, 145)' }">
+      {{textButton}}
+      </span>
     </ion-button>
   </ion-col>
 
   <ion-col size="4">
-    <ion-button id="pickMe" (click)="isSelected()">
+    <ion-button id="pickMe" [ngStyle]="{'background': buttonAirSelected ? 'rgb(0, 110, 255)' : 'none' }" (click)="isAirSelected()">
       <ion-icon name="snow-outline"></ion-icon>
 
-      <p id="AirConditioningTitle">
-        Air conditioning
+      <p id="AirTitle" [ngStyle]="{'color': buttonAirSelected ? 'black' : ' rgb(145, 145, 145)' }">
+        Air
       </p>
-      <span>{{textButton}}</span>
+      <span id="airValue" [ngStyle]="{'color': buttonAirSelected ? 'black' : ' rgb(145, 145, 145)' }">{{textButton}}</span>
     </ion-button>
   </ion-col>
 </ion-row>

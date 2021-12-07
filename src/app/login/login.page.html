@@ -1,22 +1,26 @@
 <ion-content>
 
 
-  <div class="background-car">
-    <img src="../../assets/Mercedes-AMG-GT-750x1334.jpg">
-  </div>
+  
 
   <form>
+ 
+      <ion-item [ngClass]="{'border-error': error }" id="inputControl">
+        <ion-icon  [ngStyle]="{'color': error ? 'rgb(255, 73, 6)' : 'white'}" name="person-outline"></ion-icon>
+        <ion-input [(ngModel)]="user.email" [ngStyle]="{'color': error ? 'rgb(255, 73, 6)' : 'white'}" type="email" required name="email"></ion-input>
+      </ion-item>
 
-    <ion-item id="input-control">
-      <ion-icon name="person-outline"></ion-icon>
-      <ion-input type="email" required></ion-input>
-    </ion-item>
 
-    <ion-item id="input-control">
-      <ion-icon name="lock-closed-outline"></ion-icon>
-      <ion-input type="password" required ></ion-input>
-    </ion-item>
-
+    <ion-item [ngClass]="{'border-error': error }" id="inputControl">
+      <ion-icon [ngStyle]="{'color': error ? 'rgb(255, 73, 6)' : 'white'}" name="lock-closed-outline"></ion-icon>
+      <ion-input  [(ngModel)]="user.password" [ngStyle]="{'color': error ? 'rgb(255, 73, 6)' : 'white'}" type="password" required name="password"></ion-input>
+    </ion-item>    
+    
+      <div *ngIf="error" class="error-message">
+        <ion-icon name="warning-outline"></ion-icon>
+        <span>{{textError}}</span>
+      </div>
+    
     <ion-button (click)="login()">Login</ion-button>
     <ion-button color="light" (click)="signupPage()">Sign In</ion-button>
 
